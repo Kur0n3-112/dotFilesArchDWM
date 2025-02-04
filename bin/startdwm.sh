@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Configuración del teclado
-#setxkbmap us intl
+# Configuracion del teclado
+setxkbmap us,es -option 'grp:win_space_toggle'
 
 # ENV variables
 export EDITOR=nvim
