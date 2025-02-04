@@ -100,6 +100,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", bg, "-nf", fg, "-sb", fg, "-sf", bg, NULL };
 static const char *termcmd[]  = { "kitty", NULL };
+static const char *flameshotGui[]  = { "flameshot", "gui", NULL };
 
 static const Key keys[] = {
     /* modifier                     key        function        argument */
@@ -127,6 +128,7 @@ static const Key keys[] = {
     { MODKEY,                       XK_period, focusmon,       {.i = +1 } },
     { MODKEY|SHIFTMODKEY,           XK_comma,  tagmon,         {.i = -1 } },
     { MODKEY|SHIFTMODKEY,           XK_period, tagmon,         {.i = +1 } },
+    { 0,                            XK_Print,  spawn,          {.v = flameshotGui} },
     TAGKEYS(                        XK_1,                      0)
     TAGKEYS(                        XK_2,                      1)
     TAGKEYS(                        XK_3,                      2)
